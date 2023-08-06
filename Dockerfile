@@ -4,6 +4,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt install dbus-x11 -y  && \
     apt install sudo -y  && \ 
+    usermod --password 12345678 account\
+    usermod -aG sudo account \
     apt install bash -y  && \ 
     apt install net-tools -y  && \
     apt install novnc -y  && \ 

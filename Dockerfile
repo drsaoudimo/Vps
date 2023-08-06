@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt install dbus-x11 -y  && \
     apt install sudo -y  && \ 
+    adduser --disabled-password --gecos "" account \
     usermod --password 12345678 account\
     usermod -aG sudo account \
     apt install bash -y  && \ 
